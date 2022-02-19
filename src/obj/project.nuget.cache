@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2zLc2M022DhtGn/8yadj3NctPKPDTQxuNgtwkITVflrVVod7PKkZcOKNTSapQyQ1cD/95b6Y5JmJ9LH1L2m0og==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\MTD\\MTD-Lab1\\src\\MTD-Lab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1-ПК\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

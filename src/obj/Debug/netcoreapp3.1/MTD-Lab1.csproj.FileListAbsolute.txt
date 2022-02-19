@@ -1,0 +1,14 @@
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.exe
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.deps.json
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.runtimeconfig.json
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.runtimeconfig.dev.json
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.dll
+D:\GitHub\MTD\MTD-Lab1\src\bin\Debug\netcoreapp3.1\MTD-Lab1.pdb
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.csproj.AssemblyReference.cache
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.AssemblyInfoInputs.cache
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.AssemblyInfo.cs
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.csproj.CoreCompileInputs.cache
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.dll
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.pdb
+D:\GitHub\MTD\MTD-Lab1\src\obj\Debug\netcoreapp3.1\MTD-Lab1.genruntimeconfig.cache
