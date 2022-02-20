@@ -8,5 +8,15 @@ namespace MTD_Lab1
         {
             Console.ReadKey();
         }
+
+        private static void DisplayEquation(double[] coefficients)
+        {
+
+        }
+
+        private static void DisplayResults(double[] roots)
+        {
+
+        }
     }
 }
