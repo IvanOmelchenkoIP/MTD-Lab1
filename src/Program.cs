@@ -13,13 +13,15 @@ namespace MTD_Lab1
             double[] coefficients = sc.GetCoefficients();
             DisplayEquation(coefficients);
 
+            double[] roots = sc.CountRoots();
+
             Console.ReadKey();
         }
 
         private static void DisplayEquation(double[] coefficients)
         {
             Console.Write("The equation is: ");
-            for(int i = 0; i < coefficients.Length; i++)
+            for (int i = 0; i < coefficients.Length; i++)
             {
                 double number = coefficients[i];
                 if (number == 0) continue;
@@ -33,7 +35,7 @@ namespace MTD_Lab1
 
                 int rank = (coefficients.Length - 1) - i;
                 string param;
-                switch(rank)
+                switch (rank)
                 {
                     case 0:
                         param = "";

@@ -12,8 +12,30 @@ namespace MTD_Lab1
 
         public double[] CountRoots()
         {
-            double[] roots = new double[2];
+            double a = coefficients[0];
+            double b = coefficients[1];
+            double c = coefficients[2];
 
+            double x1, x2;
+
+            double D = Math.Pow(b, 2) - 4 * a * c;
+            if (D < 0)
+            {
+                return null;
+            }
+            else if (D == 0)
+            {
+                x1 = x2 = -b / 2 * a;
+            }
+            else
+            {
+                double sqrtD = Math.Sqrt(D);
+                x1 = -b + sqrtD / 2 * a;
+                x2 = -b - sqrtD / 2 * a;
+
+            }
+
+            double[] roots = new double[2] {x1, x2 };
             return roots;
         }
 
@@ -33,7 +55,7 @@ namespace MTD_Lab1
         {
             string[] variables = new string[3] { "a", "b", "c" };
             int count = 0;
-            while(count < 3)
+            while (count < 3)
             {
                 Console.Write("Input coefficient {0} (must be real number): ", variables[count]);
                 string input = Console.ReadLine();
