@@ -6,6 +6,13 @@ namespace MTD_Lab1
     {
         static void Main(string[] args)
         {
+            SquareCounter sc;
+            if (args.Length > 0) sc = new FileCounter();
+            else sc = new InterractiveCounter();
+
+            sc.GetCoefficients();
+
+
             Console.ReadKey();
         }
 
