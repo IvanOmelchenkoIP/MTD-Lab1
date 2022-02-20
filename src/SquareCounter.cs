@@ -55,8 +55,6 @@ namespace MTD_Lab1
                 count++;
             }
 
-            foreach (double coefficient in coefficients) Console.WriteLine("{0}", coefficient);
-
             return coefficients;
         }
     }
