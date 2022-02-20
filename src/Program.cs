@@ -14,6 +14,7 @@ namespace MTD_Lab1
             DisplayEquation(coefficients);
 
             double[] roots = sc.CountRoots();
+            DisplayResults(roots);
 
             Console.ReadKey();
         }
@@ -54,7 +55,25 @@ namespace MTD_Lab1
 
         private static void DisplayResults(double[] roots)
         {
+            if (roots == null)
+            {
+                Console.WriteLine("There are 0 roots");
+                return;
+            }
 
+            double x1 = roots[0];
+            double x2 = roots[1];
+
+            if (x1 == x2)
+            {
+                Console.WriteLine("There is 1 root:");
+                Console.WriteLine("x1 = x2 = {0}", x1);
+            }
+            else
+            {
+                Console.WriteLine("There are 2 roots:");
+                Console.WriteLine("x1 = {0},\nx2 = {1}", x1, x2);
+            }
         }
     }
 }

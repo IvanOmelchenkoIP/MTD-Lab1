@@ -25,14 +25,13 @@ namespace MTD_Lab1
             }
             else if (D == 0)
             {
-                x1 = x2 = -b / 2 * a;
+                x1 = x2 = -b / (2 * a);
             }
             else
             {
                 double sqrtD = Math.Sqrt(D);
-                x1 = -b + sqrtD / 2 * a;
-                x2 = -b - sqrtD / 2 * a;
-
+                x1 = (-b + sqrtD) / (2 * a);
+                x2 = (-b - sqrtD) / (2 * a);
             }
 
             double[] roots = new double[2] {x1, x2 };
