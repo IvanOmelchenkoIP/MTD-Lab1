@@ -118,7 +118,7 @@ namespace MTD_Lab1
                 if (double.TryParse(
                     input,
                     NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign,
-                    CultureInfo.InvariantCulture, 
+                    CultureInfo.InvariantCulture,
                     out number
                     ) == false)
                 {

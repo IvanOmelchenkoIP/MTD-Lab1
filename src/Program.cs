@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 
 namespace MTD_Lab1
 {
@@ -6,6 +8,8 @@ namespace MTD_Lab1
     {
         static void Main(string[] args)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
             SquareCounter sc;
             double[] coefficients;
             if (args.Length > 0) 
