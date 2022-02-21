@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace MTD_Lab1
 {
@@ -8,7 +9,7 @@ namespace MTD_Lab1
     {
         protected double[] coefficients = new double[3];
 
-        public abstract double[] GetCoefficients();
+        public abstract double[] GetCoefficients(string filepath = null);
 
         public double[] CountRoots()
         {
@@ -42,15 +43,54 @@ namespace MTD_Lab1
 
     class FileCounter : SquareCounter
     {
-        public override double[] GetCoefficients() 
+        public override double[] GetCoefficients(string filepath) 
         {
+            string filetext = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(filepath))
+                {
+                    filetext = sr.ReadToEnd();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error! File {0} is not found", filepath);
+                return null;
+            }
+
+            string[] fileCoefficients = filetext.Split("\n")[0].Split(" ");
+            if (coefficients.Length != fileCoefficients.Length)
+            {
+                Console.WriteLine("Error! Invalid amount of coefficients in file");
+                return null;
+            }
+
+            for (int i = 0; i < coefficients.Length; i++)
+            {
+                double number;
+                if (double.TryParse(fileCoefficients[i], out number) == false)
+                {
+                    Console.WriteLine("Error! Expected a real number, got {0} instead", fileCoefficients[i]);
+                    return null;
+                }
+
+                if (i == 0 && number == 0)
+                {
+                    Console.WriteLine("Error! a can`t be 0");
+                    return null;
+                }
+
+                coefficients[i] = number;
+            }
+
             return coefficients;
         }
     }
 
     class InterractiveCounter : SquareCounter
     {
-        public override double[] GetCoefficients()
+        public override double[] GetCoefficients(string filepath = null)
         {
             string[] variables = new string[3] { "a", "b", "c" };
             int count = 0;

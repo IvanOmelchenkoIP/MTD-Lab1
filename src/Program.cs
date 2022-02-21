@@ -7,10 +7,17 @@ namespace MTD_Lab1
         static void Main(string[] args)
         {
             SquareCounter sc;
-            if (args.Length > 0) sc = new FileCounter();
-            else sc = new InterractiveCounter();
-
-            double[] coefficients = sc.GetCoefficients();
+            double[] coefficients;
+            if (args.Length > 0) 
+            { 
+                sc = new FileCounter();
+                coefficients = sc.GetCoefficients(args[0]);
+            }
+            else
+            {
+                sc = new InterractiveCounter();
+                coefficients = sc.GetCoefficients();
+            }
             DisplayEquation(coefficients);
 
             double[] roots = sc.CountRoots();
