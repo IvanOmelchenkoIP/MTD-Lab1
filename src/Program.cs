@@ -18,10 +18,10 @@ namespace MTD_Lab1
                 sc = new InterractiveCounter();
                 coefficients = sc.GetCoefficients();
             }
-            DisplayEquation(coefficients);
+            //DisplayEquation(coefficients);
 
-            double[] roots = sc.CountRoots();
-            DisplayResults(roots);
+            //double[] roots = sc.CountRoots();
+            //DisplayResults(roots);
 
             Console.ReadKey();
         }
