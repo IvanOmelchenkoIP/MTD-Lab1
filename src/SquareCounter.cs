@@ -14,6 +14,12 @@ namespace MTD_Lab1
 
         public double[] CountRoots()
         {
+            if (coefficients == null || coefficients[0] == 0)
+            {
+                Console.WriteLine("\nError! Expected coefficients to solve equation");
+                return null;
+            }
+
             double a = coefficients[0];
             double b = coefficients[1];
             double c = coefficients[2];
@@ -46,7 +52,7 @@ namespace MTD_Lab1
     {
         public override double[] GetCoefficients(string filepath) 
         {
-            Console.WriteLine("Reading data from the file {0}\n", filepath);
+            Console.WriteLine("Reading data from the file {0}...", filepath);
 
             string filetext = "";
             try
@@ -76,7 +82,8 @@ namespace MTD_Lab1
                     fileCoefficients[i], 
                     NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, 
                     CultureInfo.InvariantCulture, 
-                    out number) == false)
+                    out number
+                    ) == false)
                 {
                     Console.WriteLine("Error! Expected a real number, got {0} instead", fileCoefficients[i]);
                     return null;
@@ -91,6 +98,7 @@ namespace MTD_Lab1
                 coefficients[i] = number;
             }
 
+            Console.WriteLine("The coefficients were successfully extracted from file\n");
             return coefficients;
         }
     }
@@ -111,7 +119,8 @@ namespace MTD_Lab1
                     input,
                     NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign,
                     CultureInfo.InvariantCulture, 
-                    out number) == false)
+                    out number
+                    ) == false)
                 {
                     Console.WriteLine("Error! Expected a real number, got {0} instead", input);
                     continue;

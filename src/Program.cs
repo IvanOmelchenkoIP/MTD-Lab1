@@ -28,6 +28,8 @@ namespace MTD_Lab1
 
         private static void DisplayEquation(double[] coefficients)
         {
+            if (coefficients == null || coefficients[0] == 0) return;
+
             Console.Write("The equation is: ");
             for (int i = 0; i < coefficients.Length; i++)
             {
