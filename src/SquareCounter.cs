@@ -45,9 +45,7 @@ namespace MTD_Lab1
     {
         public override double[] GetCoefficients(string filepath) 
         {
-            Console.WriteLine("Starting file input:");
             string filetext = "";
-            Console.WriteLine(filepath);
             try
             {
                 using (StreamReader sr = new StreamReader(filepath))
@@ -61,16 +59,12 @@ namespace MTD_Lab1
                 return null;
             }
 
-            Console.WriteLine(filetext);
-
             string[] fileCoefficients = filetext.Split("\n")[0].Split(" ");
             if (coefficients.Length != fileCoefficients.Length)
             {
                 Console.WriteLine("Error! Invalid amount of coefficients in file");
                 return null;
             }
-
-            Console.WriteLine("Correct amount of coefficients");
 
             for (int i = 0; i < coefficients.Length; i++)
             {
@@ -89,9 +83,6 @@ namespace MTD_Lab1
 
                 coefficients[i] = number;
             }
-
-            Console.WriteLine("Coefficients:");
-            foreach (double number in coefficients) Console.WriteLine(number);
 
             return coefficients;
         }
