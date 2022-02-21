@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Globalization;
 
 namespace MTD_Lab1
 {
@@ -45,6 +46,8 @@ namespace MTD_Lab1
     {
         public override double[] GetCoefficients(string filepath) 
         {
+            Console.WriteLine("Reading data from the file {0}\n", filepath);
+
             string filetext = "";
             try
             {
@@ -69,7 +72,11 @@ namespace MTD_Lab1
             for (int i = 0; i < coefficients.Length; i++)
             {
                 double number;
-                if (double.TryParse(fileCoefficients[i], out number) == false)
+                if (double.TryParse(
+                    fileCoefficients[i], 
+                    NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign, 
+                    CultureInfo.InvariantCulture, 
+                    out number) == false)
                 {
                     Console.WriteLine("Error! Expected a real number, got {0} instead", fileCoefficients[i]);
                     return null;
@@ -100,7 +107,11 @@ namespace MTD_Lab1
                 string input = Console.ReadLine();
                 
                 double number;
-                if (double.TryParse(input, out number) == false)
+                if (double.TryParse(
+                    input,
+                    NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign,
+                    CultureInfo.InvariantCulture, 
+                    out number) == false)
                 {
                     Console.WriteLine("Error! Expected a real number, got {0} instead", input);
                     continue;
