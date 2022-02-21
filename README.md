@@ -48,14 +48,22 @@ For example:
 You can also write a path to file for the program to work in file input mode using commands
 
     dotnet run yourPathToTextFile
+    
+For direct launch from directory *src*
+
     dotnet run --project yourPathToProject yourpathToTextFile
+
+For launch using path to project
 
 Examples:
 
     dotnet run D:\MTD-Lab1\testFiles\01.txt
+
+For direct launch from directory *src*
+    
     dotnet run --project D:\MTD-Lab1\src\MTD-Lab1.csproj D:\MTD-Lab1\testFiles\01.txt
 
-For direct launch from folder *src* and for launch with project path respectively
+For launch using path to the project
 
 ## Work Modes
 
