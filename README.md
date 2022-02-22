@@ -15,16 +15,16 @@ The program uses following algorithm to solve the equation:
 - If there are no coefficients or coefficient a is equal to zero, the program will not count roots as the equation will not be quadratic
 - If there is coefficient, the problem counts discriminant:
         
-        D = b^2 - 4 \* a \* c
+        D = b^2 - 4 * a * c
 
-  - If *D < 0*, returns null as there are no roots to such equations
+  - If *D < 0*, returns **null** as there are no roots to such equations
   - If *D = 0*, there is single root:
 
           x = -b / (2 * a)
 
   - If *D > 0*, there are two roots:
 
-           x1 = (-b + sqrt(D)) / (2 * a),
+           x1 = (-b + sqrt(D)) / (2 * a)
            x2 = (-b - sqrt(D)) / (2 * a)
 
 ## Installation and usage
